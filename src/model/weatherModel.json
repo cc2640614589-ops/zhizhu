@@ -1,0 +1,57 @@
+[
+    {
+        "provinceName": "广东省",
+        "adcode": "440000",
+        "weatherData": {
+            "weather": "多云",
+            "temperature": "26",
+            "windDirection": "东南",
+            "windPower": "≤3",
+            "humidity": "65",
+            "reportTime": "2026-06-18 10:00:00"
+        },
+        "children": [
+            {
+                "cityName": "广州市",
+                "adcode": "440100",
+                "type": "city",
+                "weatherData": {
+                    "weather": "雷阵雨",
+                    "temperature": "28",
+                    "reportTime": "2026-06-18 10:00:00"
+                }
+            },
+            {
+                "cityName": "深圳市",
+                "adcode": "440300",
+                "type": "city",
+                "weatherData": {
+                    "weather": "晴",
+                    "temperature": "29",
+                    "reportTime": "2026-06-18 10:00:00"
+                }
+            },
+            {
+                "cityName": "天河区",
+                "adcode": "440106",
+                "type": "county",
+                "parentAdcode": "440100",
+                "weatherData": {
+                    "weather": "阴",
+                    "temperature": "27",
+                    "reportTime": "2026-06-18 10:00:00"
+                }
+            }
+        ]
+    },
+    {
+        "provinceName": "浙江省",
+        "adcode": "330000",
+        "weatherData": {
+            "weather": "小雨",
+            "temperature": "22",
+            "reportTime": "2026-06-18 10:00:00"
+        },
+        "children": []
+    }
+]
