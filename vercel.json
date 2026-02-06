@@ -3,6 +3,10 @@
     "buildCommand": "npm run build",
     "rewrites": [
         {
+            "source": "/ali-geo/(.*)",
+            "destination": "https://geo.datav.aliyun.com/$1"
+        },
+        {
             "source": "/(.*)",
             "destination": "/index.html"
         }

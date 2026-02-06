@@ -55,7 +55,7 @@ const loadMap = async (code) => {
   });
 
   try {
-    const url = `https://geo.datav.aliyun.com/areas_v3/bound/${code}_full.json`;
+    const url = `/ali-geo/areas_v3/bound/${code}_full.json`;
     const { data: geoJson } = await axios.get(url);
     
     echarts.registerMap(`map_${code}`, geoJson);
@@ -66,7 +66,7 @@ const loadMap = async (code) => {
   } catch (error) {
     console.warn('Failed to load _full.json, trying fallback:', error);
     try {
-      const fallbackUrl = `https://geo.datav.aliyun.com/areas_v3/bound/${code}.json`;
+      const fallbackUrl = `/ali-geo/areas_v3/bound/${code}.json`;
       const { data: geoJson } = await axios.get(fallbackUrl);
       
       echarts.registerMap(`map_${code}`, geoJson);

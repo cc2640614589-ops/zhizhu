@@ -157,14 +157,14 @@ export const getAreaGeoJson = async (adcode) => {
     }
 
     try {
-        const url = `https://geo.datav.aliyun.com/areas_v3/bound/${adcode}_full.json`;
+        const url = `/ali-geo/areas_v3/bound/${adcode}_full.json`;
         const res = await axios.get(url);
         geoCache.set(adcode, res.data);
         return res.data;
     } catch (e) {
         // 降级尝试不带 _full (只有轮廓没有子级)
         try {
-            const urlSimple = `https://geo.datav.aliyun.com/areas_v3/bound/${adcode}.json`;
+            const urlSimple = `/ali-geo/areas_v3/bound/${adcode}.json`;
             const res = await axios.get(urlSimple);
             geoCache.set(adcode, res.data);
             return res.data;
