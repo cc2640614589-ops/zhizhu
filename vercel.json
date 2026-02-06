@@ -1,0 +1,4 @@
+{
+    "installCommand": "npm install --unsafe-perm",
+    "buildCommand": "npm run build"
+}
